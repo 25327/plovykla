@@ -13,7 +13,7 @@ class CreateSubscriberRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class CreateSubscriberRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'email' => 'email'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'email' => 'Blogas el. paštas'
+        ];
+    }
+
 }
