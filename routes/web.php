@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'soon'])->name('soon');
 
 Route::post('/subscribe', [\App\Http\Controllers\HomeController::class, 'subscribe'])->name('subscribe');
+
+Route::resource('services', \App\Http\Controllers\ServiceController::class);
