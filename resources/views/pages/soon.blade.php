@@ -2,7 +2,8 @@
 
 <p>Gauk pranesima, kai startuosim!</p>
 
-<form>
+<form action="{{ route('subscribe') }}" method="post">
+    @csrf
     <input type="text" name="email">
     <input type="submit" name="Pranesti">
 </form>
